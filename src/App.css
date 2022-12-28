@@ -13,9 +13,6 @@ body {
 }
 
 .header {
-  flex: 30%;
-  background-color: tomato;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,13 +43,4 @@ body {
   border-top-right-radius: 8px;
   padding-left: 10px;
   cursor: pointer;
-}
-
-.taskList {
-  flex: 70%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  flex-direction: column;
 }
