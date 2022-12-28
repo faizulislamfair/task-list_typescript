@@ -30,6 +30,15 @@ const App: FC = () => {
   }
 
 
+  const completeTask = (taskNameToDelete: string): void => {
+
+    setTaskList(taskList.filter(task => {
+      return task.taskName !== taskNameToDelete
+    }))
+
+  }
+
+
   return (
     <div className="App">
       <div className="header">
@@ -60,7 +69,7 @@ const App: FC = () => {
         {
 
           taskList.map((task: ITask, key: number) => {
-            return <TodoTask key={key} task={task} />
+            return <TodoTask key={key} task={task} completeTask={completeTask} />
           })
 
         }
