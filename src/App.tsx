@@ -41,10 +41,11 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <div className="header">
-        <div className='inputContainer mt-5'>
+      <div>
+        <div className='mt-5'>
 
           <input
+            className="input input-bordered input-info w-full max-w-xs"
             type="text"
             placeholder='Task...'
             name="task"
@@ -53,6 +54,7 @@ const App: FC = () => {
           />
 
           <input
+            className="input input-bordered input-info w-full max-w-xs mt-2"
             type="number"
             placeholder='Deadline (Days)...'
             name="deadline"
@@ -62,10 +64,10 @@ const App: FC = () => {
 
         </div>
 
-        <button onClick={addTask} className='btn mt-5'>Add Task</button>
+        <button onClick={addTask} className='btn add-button button mt-5'>Add Task</button>
 
       </div>
-      <div className="taskList grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-6 mt-12">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-6 mt-14">
         {
 
           taskList.map((task: ITask, key: number) => {
