@@ -22,6 +22,8 @@ const App: FC = () => {
   const addTask = (): void => {
     const newTask = { taskName: task, deadline: deadline }
     setTaskList([...taskList, newTask]);
+    setTask("");
+    setDeadline(0);
   }
 
 
@@ -34,6 +36,7 @@ const App: FC = () => {
             type="text"
             placeholder='Task...'
             name="task"
+            value={task}
             onChange={handleChange}
           />
 
@@ -41,6 +44,7 @@ const App: FC = () => {
             type="number"
             placeholder='Deadline (Days)...'
             name="deadline"
+            value={deadline}
             onChange={handleChange}
           />
 
